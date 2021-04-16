@@ -44,27 +44,9 @@ function removeElement() {
   removeElement.forEach(elem => firstList.removeChild(elem));
 }
 
-// Funcion para clonar lista
-function generateList() {
-  const firstListChilds = [...document.getElementById("list1").children];
-  const secondList = document.getElementById("list2");
-
-    firstListChilds.forEach(elem => {
-    const elemChild = elem.firstChild;
-    const item = document.createElement("li");
-    const button = document.createElement("button");
-    const text = document.createTextNode(elemChild.textContent);
-    button.className = elemChild.className;
-    button.appendChild(text);
-    item.appendChild(button);
-    secondList.appendChild(item);
-  });
-}
-
 function onLoad() {
   addClasses();
   removeElement();
-  generateList();
 }
 
 
